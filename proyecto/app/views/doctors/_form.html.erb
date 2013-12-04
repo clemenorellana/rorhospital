@@ -1,0 +1,24 @@
+
+<%= form_for @doctor do |d| %>
+<div>
+<%= d.label :name, "Nombre" %>
+<%= d.text_field :name %>
+</div>
+
+<div>
+<%= d.label :address, "Direccion" %>
+<%= d.text_area :address %>
+</div>
+
+<div>
+<%= d.label :email, "Correo" %>
+<%= d.email_field :email %>
+</div>
+
+<div>
+<%= d.label :speciality, "Especialidad" %>
+<%= d.text_field :speciality %>
+</div>
+
+<%= d.submit %>
+<% end %>

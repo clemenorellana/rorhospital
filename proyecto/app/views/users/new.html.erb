@@ -1,0 +1,37 @@
+
+<h1> New user Create </h1>
+
+<%= form_for @user do |f| %>
+<div>
+<%= f.label :name, "Nombre" %>
+<%= f.text_field :name %>
+	</div>
+
+	<div>
+<%= f.label :username, "Username" %>
+<%= f.text_field :username %>
+	</div>
+
+	<div>
+<%= f.label :level, "Permisos" %>
+<%= f.select(:level, [["administrador"], ["contenido"]]) %>
+	</div>
+
+	<div>
+<%= f.label :email, "Correo" %>
+<%= f.email_field :email %>
+	</div>
+
+	<div>
+<%= f.label :password, "Contraseña" %>
+<%= f.password_field :password %>
+	</div>
+
+<div>
+<%= f.label :password_confirmation, "Confirme Password" %>
+<%= f.password_field :password_confirmation %>
+	</div>
+
+
+	<%= f.submit %>
+	<% end %>
